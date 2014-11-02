@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>js tanulgatas</title>
+  </head>
+  <body>
+
+
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+        function createRow (length) {
+            var row = $('<tr>');
+
+            for (var i = 0; i < length; i++) {
+                var cell = $('<td>');
+                cell.text(Math.round(Math.random() * 100));
+                row.append(cell);
+            }
+            return row;
+        }
+
+
+        function createTable (size) {
+            var table = $('<table>').prop('border', 1);
+
+            for (var i = 0; i < size; i++) {
+                table.append(createRow(size));
+            }
+
+            return table;
+
+        }
+
+        $('body').append(createTable(5));
+
+        $('table').click(function () {
+            var table = $(this),
+                size = table.find('tr').size(),
+                i,j,cellA,cellB,tmp;
+
+            for (i = 0; i < size; i++) {
+                for (j = 0; j < i; j++) {
+                    cellA = table.find('tr').eq(i).find('td').eq(j);
+                    cellB = table.find('tr').eq(j).find('td').eq(i);
+
+                    tmp = cellA.text();
+                    cellA.text(cellB.text());
+                    cellB.text(tmp);
+                }
+            }
+
+        });
+
+    </script>
+ </body>
+</html>
