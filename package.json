@@ -1,0 +1,22 @@
+{
+  "name": "jstanulgatas",
+  "version": "0.0.0",
+  "description": "",
+  "main": "webserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zkiiito/jstanulgatas.git"
+  },
+  "author": "zooli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zkiiito/jstanulgatas/issues"
+  },
+  "homepage": "https://github.com/zkiiito/jstanulgatas",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
+}
